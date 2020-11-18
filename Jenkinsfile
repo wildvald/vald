@@ -1,8 +1,6 @@
 pipeline {
   agent any
   stages {
-    stage('clean') {
-      parallel {
         stage('clean') {
           steps {
             echo 'Clean'
