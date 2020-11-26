@@ -6,7 +6,7 @@ pipeline {
                 echo "Repository Checkout..."
             }
         }
-		stage(02. War file") {
+		stage("02. War file") {
             steps {
                 echo "War file..."
             }
