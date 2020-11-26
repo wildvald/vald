@@ -1,47 +1,47 @@
 pipeline {
     agent any
 	stages{
-		stage("Repository Checkout") {
+		stage("01 - Repository Checkout") {
             steps {
                 echo "Repository Checkout..."
             }
         }
-		stage("War file") {
+		stage(02 - War file") {
             steps {
                 echo "War file..."
             }
         }
-		stage("Javadoc") {
+		stage("03 - Javadoc") {
             steps {
                 echo "Javadoc..."
             }
         }
-		stage("Unit Tests") {
+		stage("04 - Unit Tests") {
             steps {
                 echo "Unit Tests..."
             }
         }
-		stage("Integration Tests") {
+		stage("05 - Integration Tests") {
             steps {
                 echo "Integration Tests..."
             }
         }
-		stage("Mutation Tests") {
+		stage("06 - Mutation Tests") {
             steps {
                 echo "Mutation Tests..."
             }
         }
-		stage("System Tests") {
+		stage("07 - System Tests") {
             steps {
                 echo "Systems Tests..."
             }
         }
-		stage("UI Acceptance Manual Tests") {
+		stage("08 - UI Acceptance Manual Tests") {
             steps {
                 echo "UI Acceptance Manual Tests..."
             }
         }
-		stage("Continuous Integration Feedback") {
+		stage("09 - Continuous Integration Feedback") {
             steps {
                 echo "Continuous Integration Feedback..."
             }
