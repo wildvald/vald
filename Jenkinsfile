@@ -1,15 +1,15 @@
 pipeline {
   agent any
   stages {
-        stage('clean') {
+        stage('Repository Checkout') {
           steps {
-            echo 'Clean'
+            echo 'Repository Checkout...'
           }
         }
 
-        stage('deploy') {
+        stage('War file') {
           steps {
-            echo 'deploy'
+            echo 'War file...'
           }
         }
 
@@ -38,6 +38,4 @@ pipeline {
         echo 'done'
       }
     }
-
-  }
 }
