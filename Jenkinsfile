@@ -28,7 +28,7 @@ pipeline
 		stage ('Build')
 		{
 			steps {
-				echo TOMCAT_DIRECTORY
+				echo '$CATALINA_HOME'
 				/*dir ('odsoft/exercise2/component3/cms') 
 				{
 					buildFunction()
