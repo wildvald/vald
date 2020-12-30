@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-   // vars para deploy, com autenticação do jenkins e hostname do servidor tomcat
+// vars para deploy, com autenticação do jenkins e hostname do servidor tomcat
 
 pipeline 
 {
@@ -250,10 +250,11 @@ void deployToTomcat()
 	{
 		if(isUnix())
 		{
-			sh "curl -u ${TOMCAT_USER}:${TOMCAT_PWD} -T build/libs/cms-1.0.war '${TOMCAT_HOST}/manager/text/deploy?path=/cms-1.0&update=true'"
+			//sh "curl -u ${TOMCAT_USER}:${TOMCAT_PWD} -T build/libs/cms-1.0.war '${TOMCAT_HOST}/manager/text/deploy?path=/cms-1.0&update=true'"
 		} else 
 		{
-			bat "curl -u ${TOMCAT_USER}:${TOMCAT_PWD} -T build/libs/cms-1.0.war '${TOMCAT_HOST}/manager/text/deploy?path=/cms-1.0&update=true'"
+			//bat "curl -u ${TOMCAT_USER}:${TOMCAT_PWD} -T build/libs/cms-1.0.war '${TOMCAT_HOST}/manager/text/deploy?path=/cms-1.0&update=true'"
+			bat "curl -u ${TOMCAT_USER}:${TOMCAT_PWD} -T build/libs/cms-1.0.war '${TOMCAT_HOST}/manager/deploy?path=/cms-1.0&update=true'"
 		}
 	}
 }
