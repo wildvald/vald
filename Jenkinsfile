@@ -28,11 +28,12 @@ pipeline
 		stage ('Build')
 		{
 			steps {
-				dir ('odsoft/exercise2/component3/cms') 
+				echo '$TOMCAT_DIRECTORY'
+				/*dir ('odsoft/exercise2/component3/cms') 
 				{
 					buildFunction()
 					archiveArtifactsFunction()                    
-				}
+				}*/
 			}
 		}
 		
